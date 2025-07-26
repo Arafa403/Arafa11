@@ -1,0 +1,602 @@
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "work Sans", sans-serif;
+}
+
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/*Start Components */
+.special-heading {
+    color: #ebeceb;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin-left: 400px;
+    margin-bottom: 800px;
+    margin-top: -63px;
+}
+
+@media (max-width: 767px) {
+    .special-heading {
+        font-size: 60px;
+        margin-left: 33px;
+        margin-top: -35px;
+    }
+}
+
+/*End Components */
+/*Start Header */
+.header {
+    padding: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 88px;
+}
+
+.header .logo {
+    width: 60px;
+}
+
+.header .links {
+    position: relative;
+}
+
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header .links .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+.header .links .icon span:first-child {
+    width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 0.3s;
+}
+
+.header .links .icon span:last-child {
+    width: 100%;
+}
+
+.header .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+
+}
+
+.header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    right: 5px;
+    top: -20px;
+    position: absolute;
+
+}
+
+.header .links:hover ul {
+    display: block;
+}
+
+.header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.header .links ul li a:hover {
+    padding-left: 25px;
+}
+
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #DDD;
+}
+
+/*End Header*/
+/*start Landing section*/
+.Landing {
+    background-image: url(../images/beautiful-shot-mountain-clouds-black-white.jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+
+}
+
+.Landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+
+}
+
+.Landing .intro-text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color);
+
+
+}
+
+.Landing .intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+/*End Landing section */
+/*Start Feature */
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+
+}
+
+.features .feat {
+    padding: 20px;
+    text-align: center;
+}
+
+.features .feat i {
+    color: var(--main-color);
+}
+
+.features .feat h3 {
+    font-weight: 800;
+    margin: 30px 0;
+}
+
+.features .feat p {
+    line-height: 1.6;
+    color: #777;
+    font-size: 17px;
+}
+
+.services {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ========== العنوان الرئيسي ========== */
+.special-heading {
+    text-align: center;
+    font-size: 40px;
+    color: #222;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.special-heading::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: #00bcd4;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    border-radius: 2px;
+}
+
+/* ========== قسم الخدمات ========== */
+.services {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.services-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.col {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.srv {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.srv:hover {
+    transform: translateY(-8px);
+}
+
+.srv i {
+    color: #00bcd4;
+    font-size: 28px;
+}
+
+.text h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.text p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ========== قسم البورتفوليو ========== */
+.portfolio {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 30%;
+    min-width: 280px;
+    background: #f1f1f1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.card .info {
+    padding: 20px;
+}
+
+.card .info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.card .info p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ========== استجابة للموبايل ========== */
+@media (max-width: 768px) {
+    .special-heading {
+        font-size: 30px;
+    }
+
+    .srv {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .services-content,
+    .portfolio-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card img {
+        height: 200px;
+    }
+}
+
+
+/*End portfolio*/
+
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* About Section */
+.about {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+}
+
+.about .special-heading {
+    text-align: left;
+    font-size: 40px;
+    margin-left: 10px;
+    /* ← تزود أو تقلل حسب ما تحب */
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* About Content Layout */
+.about-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-content .image {
+    flex: 1 1 40%;
+    max-width: 400px;
+}
+
+.about-content .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content .text {
+    flex: 1 1 55%;
+    font-size: 16px;
+    color: #444;
+}
+
+.about-content .text hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content .image,
+    .about-content .text {
+        max-width: 100%;
+    }
+
+    .about .special-heading {
+        font-size: 30px;
+    }
+}
+
+container {
+    max-width: 1200px;
+    /* Max width for content */
+    margin: 0 auto;
+    /* Centers the container */
+    padding: 0 20px;
+    /* Padding on the sides */
+}
+
+/* Contact Section Styling */
+.contact {
+    padding: 60px 0;
+    /* Vertical padding for the section */
+    background-color: #f8f8f8;
+    /* Light background for the section */
+    text-align: center;
+    /* Center align all text within the contact section */
+}
+
+.contact .special-heading {
+    font-size: 45px;
+    /* Larger font size for the heading */
+    color: #333;
+    /* Darker color for the heading */
+    margin-bottom: 40px;
+    /* Space below the heading */
+    position: relative;
+    padding-bottom: 15px;
+    /* Space for the underline effect */
+}
+
+.contact .special-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    /* Width of the underline */
+    height: 4px;
+    /* Thickness of the underline */
+    background-color: #10c4d8;
+    /* Color of the underline, adjust as needed */
+    border-radius: 2px;
+}
+
+/* Info Section Styling */
+.contact .info {
+    max-width: 600px;
+    /* Max width for the info block */
+    margin: 0 auto;
+    /* Center the info block */
+    background-color: #fff;
+    /* White background for the info card */
+    padding: 30px;
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.contact .info .label {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.contact .info .link {
+    display: inline-block;
+    /* Allows padding and margin */
+    font-size: 24px;
+    color: #007bff;
+    /* A standard blue for links */
+    text-decoration: none;
+    /* No underline by default */
+    margin-bottom: 25px;
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.contact .info .link:hover {
+    color: #0056b3;
+    /* Darker blue on hover */
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+/* Social Media Icons */
+.contact .info .social {
+    font-size: 16px;
+    color: #777;
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    gap: 15px;
+    /* Space between items */
+    margin-top: 20px;
+    /* Space above social icons */
+}
+
+.contact .info .social i {
+    font-size: 22px;
+    /* Size of the social icons */
+    color: #555;
+    /* Color of the icons */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+.contact .info .social i:hover {
+    color: #007bff;
+    /* Blue on hover, or a brand color */
+    cursor: pointer;
+    /* Indicates it's clickable */
+}
